@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penilaian Kuantitatif</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📊 Penilaian Kuantitatif</h1>
+        <form id="nilaiForm">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim" name="nim" placeholder="Masukkan NIM Anda" required>
+            </div>
+            <div class="form-group">
+                <label for="tugas">Nilai Tugas (0-100)</label>
+                <input type="number" id="tugas" name="tugas" min="0" max="100" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="uts">Nilai UTS (0-100)</label>
+                <input type="number" id="uts" name="uts" min="0" max="100" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="uas">Nilai UAS (0-100)</label>
+                <input type="number" id="uas" name="uas" min="0" max="100" step="0.01" required>
+            </div>
+            <button type="button" id="hitungButton">Hitung Nilai</button>
+        </form>
+        <div id="hasil" class="hidden">
+            <h2>🎯 Hasil Penilaian</h2>
+            <div class="result">
+                <p><strong>Nama:</strong> <span id="hasilNama"></span></p>
+                <p><strong>NIM:</strong> <span id="hasilNim"></span></p>
+                <p><strong>Nilai Tugas:</strong> <span id="hasilTugas"></span></p>
+                <p><strong>Nilai UTS:</strong> <span id="hasilUts"></span></p>
+                <p><strong>Nilai UAS:</strong> <span id="hasilUas"></span></p>
+                <p><strong>Total Nilai:</strong> <span id="hasilTotal"></span></p>
+                <p><strong>Predikat:</strong> <span id="hasilPredikat"></span></p>
+            </div>
+        </div>
+    </div>
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>Syauqi Radhi Athallah</b>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
