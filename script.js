@@ -31,7 +31,7 @@ function hitungNilai() {
     }
 
     // Menghitung total nilai
-    const total = (tugas + uts + uas) / 3;
+    const total = (tugas * 0.4) + (uts * 0.3) + (uas * 0.3);
     const hasilTotal = total.toFixed(2);
 
     // Menentukan predikat
