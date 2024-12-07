@@ -1,3 +1,17 @@
+// Fungsi untuk menampilkan pop-up
+function showPopup(message) {
+    const popup = document.getElementById("popup");
+    const popupMessage = document.getElementById("popupMessage");
+
+    popupMessage.innerText = message;
+    popup.classList.remove("hidden");
+
+    // Sembunyikan pop-up setelah 3 detik
+    setTimeout(() => {
+        popup.classList.add("hidden");
+    }, 3000);
+}
+
 // Fungsi untuk menghitung nilai
 function hitungNilai() {
     const nama = document.getElementById("nama").value;
@@ -7,12 +21,12 @@ function hitungNilai() {
     const uas = parseFloat(document.getElementById("uas").value);
 
     // Validasi input
-    if (
-        isNaN(tugas) || tugas < 0 || tugas > 100 ||
-        isNaN(uts) || uts < 0 || uts > 100 ||
-        isNaN(uas) || uas < 0 || uas > 100
-    ) {
-        alert("Semua nilai harus berada dalam rentang 0 hingga 100.");
+    if (tugas > 100 || uts > 100 || uas > 100) {
+        showPopup("Nilai tidak boleh lebih dari 100!");
+        return;
+    }
+    if (tugas < 0 || uts < 0 || uas < 0) {
+        showPopup("Nilai tidak boleh kurang dari 0!");
         return;
     }
 
