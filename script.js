@@ -9,7 +9,7 @@ function showPopup(message) {
     // Sembunyikan pop-up setelah 3 detik
     setTimeout(() => {
         popup.classList.add("hidden");
-    }, 3000);
+    }, 1500);
 }
 
 // Fungsi untuk menghitung nilai
